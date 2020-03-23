@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+
+<body class="container mt-2">
+    <div class="container">
+        <!-- APPLICATION -->
+        <div id="App" class="row pt-5 ">
+            <div class="col-md-4">
+                <div class="card  ">
+                    <div class="card-header">
+                        <h4>Add a Name</h4>
+                    </div>
+                    <form class="card-body" role="form" id="formfield" action="" method="post" enctype="multipart/form-data">
+                        <input type="hidden" name="action" value="add_form" />
+
+                        <div class="form-group  col-md-10 mt-3">
+                            <label>Last Name</label><span class="label label-danger"></span>
+                            <input type="text" class="form-control" placeholder="Enter Last Name" name="lastname" id="lastname" required="required">
+                        </div>
+
+                        <div class="form-group col-md-10 mt-4">
+                            <label>First Name</label><span class="label label-danger"></span>
+                            <input type="text" class="form-control" placeholder="Enter First Name" name="firstname" id="firstname" required="required">
+                        </div>
+                        <div class=" container row mx-auto d-block ">
+                            <input type="button" style='font-size:18px' class="btn fas fa-folder font-weight-bold btn-primary " name="btn" value="&#xf07b; Submit" id="submitBtn" data-toggle="modal" data-target="#confirm-submit" />
+
+                            <input type="button" style='font-size:18px' class="btn  btn-primary font-weight-bold" name="btn" value="Reset" id="reset" onclick="reset_form()" data-modal-type="confirm" data-dismiss="alert" />
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- MODAL -->
+
+    <div class="modal fade" id="confirm-submit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    Confirm Submit
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to submit the following details?
+                    <table class="table">
+                        <tr>
+                            <th>Last Name</th>
+                            <td id="lname"></td>
+                        </tr>
+                        <tr>
+                            <th>First Name</th>
+                            <td id="fname"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <a href="#" id="submit" class="btn btn-success success">Submit</a>
+
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <script type="text/javaScript" src="js/modal.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</body>
+
+</html>
